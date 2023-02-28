@@ -1,7 +1,7 @@
 import inquirer from 'inquirer';
 import fs from 'fs';
 
-
+// function to generate the README from users answers
 const generateReadme = (answers) => `
 # ${answers.title}
 
@@ -10,7 +10,7 @@ const generateReadme = (answers) => `
 ${answers.description}
 
 ## Table of Contents
- 
+
 1. [Installation](#installation)
 2. [Usage](#usage)
 3. [License](#license)
@@ -94,7 +94,7 @@ const questions = [
     {
         type: 'input',
         name: 'github',
-        message: 'Enter your GitHub:'
+        message: 'Enter your GitHub username:'
     },
     {
         type: 'input',
@@ -108,8 +108,9 @@ inquirer
     .prompt(questions)
     .then(answers => {
         const markdown = generateReadme(answers);
-        // write the Markdown content to a file
+        // write the Markdown content to a file located within generated-README folder
         fs.writeFile('generated-README/README.md', markdown, (err) =>
+            // if error console.log the error if not display the message
             err ? console.error(err) : console.log('README.md file created! Check inside generated-README folder.')
         );
     });
