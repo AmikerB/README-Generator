@@ -3,13 +3,13 @@ import fs from 'fs';
 
 
 const generateReadme = (answers) => `
-#${answers.title}
+# ${answers.title}
 
 ![License](https://img.shields.io/badge/License-${answers.license}-blue.svg)
 
 ${answers.description}
 
-##Table of Contents
+## Table of Contents
  
 1. [Installation](#installation)
 2. [Usage](#usage)
@@ -18,29 +18,29 @@ ${answers.description}
 5. [Test](#test)
 6. [Questions](#questions)
 
-##Installation
+## Installation
 
 ${answers.installation}
 
-##Usage
+## Usage
 
 ${answers.usage}
 
-##License
+## License
 
 This project is licensed under the ${answers.license} license.
 
-##Contributing
+## Contributing
 
 ${answers.contributing}
 
-##Tests
+## Tests
 
 ${answers.tests}
 
-##Questions
+## Questions
 
-If you have additional questions contact me on my [GitHub](https://api.github.com/users/${answers.github}) or my email: ${answers.email}
+If you have additional questions contact me on my [GitHub](https://github.com/${answers.github}) or my email: ${answers.email}
 `;
 
 // array of license options
