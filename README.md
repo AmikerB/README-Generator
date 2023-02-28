@@ -23,6 +23,8 @@ This README generator allows the user to create a README file by using a command
 4. If there are no errors in the process, there will be a message displayed in the terminal to indicate that your README file has been successfully created.
 5. Finally, you can find your generated README file inside the generated-README folder, which is located in the same directory as the index.js file.
 
+[Demonstartion video](https://drive.google.com/file/d/1Eqfmm9peKQwpYO6xGCODxCWWuRYOdMt0/view) of application.
+
 ### Screenshot of Application
 
 The screenshot shows an open terminal window with some text output on the screen. The user's project information is displayed in the terminal output. The generated README file is shown open in a text editor. This file is located in a directory titled "generated-README" within the project's directory. The generated README file contains all of the project information that was displayed in the terminal output, formatted in a readable and professional way. The user can use this file as their project's README file.
