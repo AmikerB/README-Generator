@@ -40,7 +40,7 @@ ${answers.tests}
 
 ## Questions
 
-If you have additional questions contact me on my [GitHub](https://api.github.com/users/${answers.github}) or my email: ${answers.email}
+If you have additional questions contact me on my [GitHub](https://github.com/${answers.github}) or my email: ${answers.email}
 `;
 
 // array of license options
