@@ -7,10 +7,6 @@ This README generator allows the user to create a README file by using a command
  
 1. [Installation](#installation)
 2. [Usage](#usage)
-3. [License](#license)
-4. [Contributing](#contributing)
-5. [Test](#test)
-6. [Questions](#questions)
 
 ## Installation
 
