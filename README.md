@@ -1,11 +1,11 @@
 
-#title
+# Project1
 
-![License](https://img.shields.io/badge/License-BSD-blue.svg)
+![License](https://img.shields.io/badge/License-MIT-blue.svg)
 
-test test test test test
+this is a test to see if this will work
 
-##Table of Contents
+## Table of Contents
  
 1. [Installation](#installation)
 2. [Usage](#usage)
@@ -14,26 +14,26 @@ test test test test test
 5. [Test](#test)
 6. [Questions](#questions)
 
-##Installation
+## Installation
 
-simplily type node index.mjs and answer the questions 
+just git pull
 
-##Usage
+## Usage
 
-see above
+open terminal and type node index.js
 
-##License
+## License
 
-This project is licensed under the BSD license.
+This project is licensed under the MIT license.
 
-##Contributing
+## Contributing
 
-please email me first
+please help
 
-##Tests
+## Tests
 
-again email me first
+again test away
 
-##Questions
+## Questions
 
-If you have additional questions contact me on my [GitHub](https://api.github.com/users/amikerb) or my email: best.amiker@gmail.com
+If you have additional questions contact me on my [GitHub](https://github.com/AmikerB) or my email: best.amiker@gmail.com
