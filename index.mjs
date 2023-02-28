@@ -1,6 +1,47 @@
 import inquirer from 'inquirer';
-import axios from 'axios';
-import generateMarkdown from './generateMarkdown.js';
+import fs from 'fs';
+
+
+const generateReadme = (answers) => `
+#${answers.title}
+
+![License](https://img.shields.io/badge/License-${answers.license}-blue.svg)
+
+${answers.description}
+
+##Table of Contents
+ 
+1. [Installation](#installation)
+2. [Usage](#usage)
+3. [License](#license)
+4. [Contributing](#contributing)
+5. [Test](#test)
+6. [Questions](#questions)
+
+##Installation
+
+${answers.installation}
+
+##Usage
+
+${answers.usage}
+
+##License
+
+This project is licensed under the ${answers.license} license.
+
+##Contributing
+
+${answers.contributing}
+
+##Tests
+
+${answers.tests}
+
+##Questions
+
+If you have additional questions contact me on my [GitHub](https://api.github.com/users/${answers.github}) or my email: ${answers.email}
+`;
 
 // array of license options
 const licenseOptions = [
@@ -53,40 +94,22 @@ const questions = [
     {
         type: 'input',
         name: 'github',
-        message: 'Enter your GitHub username:'
+        message: 'Enter your GitHub:'
     },
     {
         type: 'input',
         name: 'email',
         message: 'Enter your email address:'
-    }
+    },
 ];
 
-// prompt the user for input
 // prompt the user for input
 inquirer
     .prompt(questions)
     .then(answers => {
-        // retrieve data from the GitHub API
-        axios.get(`https://api.github.com/users/${answers.github}`)
-            .then(response => {
-                // add GitHub information to the answers object
-                answers.avatar = response.data.avatar_url;
-                answers.profile = response.data.html_url;
-
-                // generate the Markdown content for the README file
-                const markdown = generateMarkdown(answers);
-
-                // write the Markdown content to a file
-                fs.writeFile('README.md', markdown, err => {
-                    if (err) {
-                        console.error(err);
-                    } else {
-                        console.log('README.md file created!');
-                    }
-                });
-            })
-            .catch(error => {
-                console.error(error);
-            });
+        const markdown = generateReadme(answers);
+        // write the Markdown content to a file
+        fs.writeFile('README.md', markdown, (err) =>
+            err ? console.error(err) : console.log('README.md file created!')
+        );
     });
