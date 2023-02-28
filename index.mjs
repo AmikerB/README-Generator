@@ -109,7 +109,7 @@ inquirer
     .then(answers => {
         const markdown = generateReadme(answers);
         // write the Markdown content to a file
-        fs.writeFile('README.md', markdown, (err) =>
-            err ? console.error(err) : console.log('README.md file created!')
+        fs.writeFile('generated-README/README.md', markdown, (err) =>
+            err ? console.error(err) : console.log('README.md file created! Check inside generated-README folder.')
         );
     });
