@@ -18,10 +18,10 @@ This README generator allows the user to create a README file by using a command
 ## Usage
 
 1. Open the terminal and navigate to the directory/folder titled "README-Generator".
-2. Run the command ```node index.mjs``` in the terminal to start the application.
+2. Run the command ```node index.js``` in the terminal to start the application.
 3. Answer the prompts that are displayed in the terminal about your project. These answers will be used to generate your README file.
 4. If there are no errors in the process, there will be a message displayed in the terminal to indicate that your README file has been successfully created.
-5. Finally, you can find your generated README file inside the generated-README folder, which is located in the same directory as the index.mjs file.
+5. Finally, you can find your generated README file inside the generated-README folder, which is located in the same directory as the index.js file.
 
 ### Screenshot of Application
 
